@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mulher Inesquecível — Transforme Sua Vida em 30 Minutos por Dia</title>
+<meta name="description" content="Descubra técnicas comprovadas de relacionamento, autocuidado e empoderamento. Mais de 10.000 mulheres transformadas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;1,6..96,400&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --rose: #C9A0DC;
+  --rose-light: #E8D5F0;
+  --rose-dark: #A87BC4;
+  --gold: #D4AF37;
+  --gold-light: #E8CC6A;
+  --gold-dark: #B8942E;
+  --off-white: #FDF8F5;
+  --off-white-alt: #FAF3EE;
+  --near-black: #2C2428;
+  --text: #3D3338;
+  --text-muted: #6B5D64;
+  --mint: #8FC9B5;
+  --mint-light: #D4EDE4;
+  --white: #FFFFFF;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+  --space-5xl: 128px;
+  --font-display: 'Bodoni Moda', Georgia, serif;
+  --font-body: 'Nunito', system-ui, sans-serif;
+  --max-width: 1120px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 1px 3px rgba(44,36,40,0.08);
+  --shadow-md: 0 4px 16px rgba(44,36,40,0.10);
+  --shadow-lg: 0 8px 32px rgba(44,36,40,0.12);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--off-white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+.section {
+  padding: var(--space-4xl) 0;
+}
+.section-rose { background: var(--rose-light); }
+.section-white { background: var(--white); }
+.section-offwhite { background: var(--off-white-alt); }
+.section-gradient { background: linear-gradient(135deg, var(--rose) 0%, #B892D4 100%); color: var(--white); }
+
+.section-hidden { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.section-visible { opacity: 1; transform: translateY(0); }
+
+h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.15; color: var(--near-black); }
+h2 { font-size: clamp(1.75rem, 4vw, 2.75rem); margin-bottom: var(--space-xl); text-align: center; }
+h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); margin-bottom: var(--space-md); }
+p { font-size: clamp(1rem, 1.2vw, 1.125rem); color: var(--text); max-width: 65ch; }
+p + p { margin-top: var(--space-md); }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 18px 48px;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  min-height: 44px;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+.btn-primary {
+  background: var(--gold);
+  color: var(--near-black);
+  box-shadow: 0 4px 20px rgba(212,175,55,0.35);
+}
+.btn-primary:hover { background: var(--gold-dark); box-shadow: 0 6px 28px rgba(212,175,55,0.45); }
+.btn-large { padding: 20px 56px; font-size: 1.125rem; }
+
+.strikethrough { text-decoration: line-through; color: var(--text-muted); font-size: 0.9em; }
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, var(--rose) 0%, #B07ED0 50%, var(--rose-dark) 100%);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 20% 50%, rgba(212,175,55,0.15) 0%, transparent 60%),
+              radial-gradient(ellipse at 80% 30%, rgba(255,255,255,0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+.hero-content { position: relative; z-index: 1; padding: var(--space-2xl) var(--space-lg); }
+.hero h1 {
+  font-size: clamp(2.25rem, 6vw, 4rem);
+  color: var(--white);
+  margin-bottom: var(--space-lg);
+  text-wrap: balance;
+}
+.hero p {
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  color: rgba(255,255,255,0.9);
+  margin: 0 auto var(--space-xl);
+  max-width: 600px;
+}
+.hero .btn { margin-top: var(--space-sm); }
+.hero-social {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xl);
+  margin-top: var(--space-2xl);
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.8);
+}
+.hero-social span { display: flex; align-items: center; gap: var(--space-sm); }
+.hero-social strong { color: var(--gold-light); }
+
+.problems { display: grid; gap: var(--space-lg); max-width: 700px; margin: 0 auto; }
+.problem-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid var(--rose);
+}
+.problem-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 2px; }
+
+.solution-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-2xl); align-items: center; }
+.solution-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(201,160,220,0.2);
+}
+.solution-features { list-style: none; margin-top: var(--space-lg); }
+.solution-features li {
+  display: flex; align-items: flex-start; gap: var(--space-md);
+  padding: var(--space-sm) 0;
+  font-size: 1.05rem;
+}
+.solution-features li::before { content: '✦'; color: var(--gold); font-size: 1.1rem; }
+
+.benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-lg); }
+.benefit-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(201,160,220,0.15);
+}
+.benefit-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.benefit-icon {
+  width: 64px; height: 64px;
+  background: var(--rose-light);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto var(--space-md);
+  font-size: 1.75rem;
+}
+.benefit-card h3 { font-size: 1.2rem; margin-bottom: var(--space-sm); }
+.benefit-card p { font-size: 0.95rem; color: var(--text-muted); }
+
+.testimonials { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-lg); }
+.testimonial-card {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(201,160,220,0.15);
+}
+.testimonial-stars { color: var(--gold); font-size: 1.1rem; margin-bottom: var(--space-sm); }
+.testimonial-text { font-style: italic; font-size: 0.95rem; color: var(--text-muted); margin-bottom: var(--space-md); line-height: 1.7; }
+.testimonial-author { display: flex; align-items: center; gap: var(--space-md); }
+.testimonial-avatar {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: var(--rose-light); display: flex; align-items: center; justify-content: center;
+  color: var(--rose-dark); font-weight: 700; font-size: 1.1rem;
+}
+.testimonial-name { font-weight: 700; font-size: 0.95rem; color: var(--near-black); }
+.testimonial-age { font-size: 0.85rem; color: var(--text-muted); }
+
+.guarantee {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto;
+}
+.guarantee-badge {
+  display: inline-flex; align-items: center; gap: var(--space-sm);
+  background: var(--mint-light); color: #2D6B5E;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: 100px;
+  font-weight: 700; font-size: 0.95rem;
+  margin-bottom: var(--space-lg);
+}
+.guarantee h2 { margin-bottom: var(--space-md); }
+.guarantee .guarantee-text { font-size: 1.1rem; margin-bottom: var(--space-lg); }
+
+.cta-final {
+  text-align: center;
+  position: relative;
+}
+.cta-final h2 { color: var(--white); }
+.cta-final p { color: rgba(255,255,255,0.9); margin: 0 auto var(--space-xl); }
+.price-block { margin-bottom: var(--space-xl); }
+.price-old { font-size: 1.25rem; color: rgba(255,255,255,0.6); }
+.price-current { font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; color: var(--gold-light); margin: var(--space-sm) 0; }
+.price-installments { font-size: 1.05rem; color: rgba(255,255,255,0.8); }
+.price-block .btn { margin-top: var(--space-lg); }
+.urgency { font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-top: var(--space-md); letter-spacing: 0.03em; }
+
+.footer {
+  padding: var(--space-3xl) 0 var(--space-2xl);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  background: var(--off-white);
+  position: relative;
+}
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%; transform: translateX(-50%);
+  width: 80px; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  border-radius: 2px;
+}
+.footer-brand {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--rose-dark);
+  letter-spacing: 0.06em;
+  margin-bottom: var(--space-sm);
+}
+.footer-divider {
+  width: 32px; height: 1px;
+  background: var(--rose-light);
+  margin: var(--space-md) auto;
+}
+.footer p { font-size: 0.8rem; color: var(--text-muted); max-width: none; }
+
+@media (max-width: 768px) {
+  .section { padding: var(--space-3xl) 0; }
+  .container { padding: 0 var(--space-md); }
+  .hero { min-height: 90vh; }
+  .hero h1 { font-size: clamp(1.75rem, 7vw, 2.25rem); }
+  .solution-grid { grid-template-columns: 1fr; }
+  .benefits-grid { grid-template-columns: 1fr; }
+  .testimonials { grid-template-columns: 1fr; }
+  .hero-social { flex-direction: column; align-items: center; gap: var(--space-md); }
+  .btn-large { padding: 16px 40px; font-size: 1rem; }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .benefits-grid { grid-template-columns: repeat(2, 1fr); }
+  .testimonials { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-content">
+    <h1>Torne-se a Mulher Inesquecível<br>Domine a Arte de Conquistar em 30 Minutos por Dia</h1>
+    <p>Descubra técnicas comprovadas de relacionamento, autocuidado e empoderamento que vão transformar sua vida amorosa e sua autoestima.</p>
+    <a href="https://pay.kiwify.com.br/yQAZ5xJ" target="_blank" rel="noopener" class="btn btn-primary btn-large">Quero Ser Inesquecível — Acesso Imediato</a>
+    <div class="hero-social">
+      <span>★ <strong>4.9/5</strong> — Avaliação média</span>
+      <span>✦ <strong>10.000+</strong> — Mulheres transformadas</span>
+    </div>
+  </div>
+</header>
+
+<section id="problema" class="section section-white section-hidden">
+  <div class="container">
+    <h2>Você Se Sente Assim Às Vezes?</h2>
+    <div class="problems">
+      <div class="problem-item"><span class="problem-icon">💔</span><div><strong>Sente que seus relacionamentos não duram</strong><p>Relacionamentos que começam intensos e se desfazem sem motivo aparente, deixando um vazio que você não sabe explicar.</p></div></div>
+      <div class="problem-item"><span class="problem-icon">🗣️</span><div><strong>Dificuldade em expressar seus sentimentos</strong><p>Você tem medo de falar o que sente com medo de perder, e acagaçando suas necessidades até não se reconhecer mais.</p></div></div>
+      <div class="problem-item"><span class="problem-icon">🪞</span><div><strong>Baixa autoestima que afeta tudo</strong><p>A insegurança se infiltra no trabalho, nas amizades, na relação com o espelho. Você sabe que merece mais, mas não sabe como chegar lá.</p></div></div>
+      <div class="problem-item"><span class="problem-icon">🔥</span><div><strong>Não sabe como manter a paixão viva</strong><p>A rotina engole o desejo, a comunicação vira silêncio, e você se pergunta onde foi parar a mulher que ele se apaixonou.</p></div></div>
+      <div class="problem-item"><span class="problem-icon">🌟</span><div><strong>Falta empoderamento para decisões importantes</strong><p>Você adia decisões, duvida de si mesma, e sente que a vida está acontecendo enquanto você espera se sentir pronta.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="solucao" class="section section-offwhite section-hidden">
+  <div class="container">
+    <h2>Apresentamos: Mulher Inesquecível</h2>
+    <div class="solution-grid">
+      <div>
+        <p style="font-size:1.15rem; margin-bottom:var(--space-lg);">Um programa completo que vai transformar sua vida em apenas <strong>30 minutos por dia</strong>.</p>
+        <div class="solution-card">
+          <h3>O Que É?</h3>
+          <p>Uma coleção de ebooks e videoaulas com técnicas práticas de relacionamento, comunicação e autocuidado — desenvolvidas por especialistas em comportamento feminino e relacionamentos.</p>
+          <ul class="solution-features">
+            <li>30 minutos por dia — encaixe na sua rotina</li>
+            <li>Aprenda ouvindo ou lendo — como preferir</li>
+            <li>Técnicas comprovadas baseadas em psicologia positiva</li>
+            <li>Acesso vitalício — revise quando quiser</li>
+          </ul>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:var(--space-lg);">
+        <div class="solution-card" style="border-left:4px solid var(--gold);">
+          <h3>Para Quem É?</h3>
+          <p>Para a mulher que sabe que merece mais — mais amor, mais confiança, mais propósito — e está pronta para investir 30 minutos por dia em si mesma.</p>
+        </div>
+        <div class="solution-card" style="border-left:4px solid var(--rose);">
+          <h3>Como Funciona?</h3>
+          <p>Você recebe acesso imediato a todo o conteúdo. Escolhe seu ritmo. Cada módulo tem uma técnica prática que você aplica no mesmo dia. Resultados desde a primeira semana.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="beneficios" class="section section-white section-hidden">
+  <div class="container">
+    <h2>O Que Você Vai Conquistar</h2>
+    <p style="text-align:center;margin:0 auto var(--space-2xl);max-width:600px;">Tudo isso em apenas <strong>30 minutos por dia</strong></p>
+    <div class="benefits-grid">
+      <div class="benefit-card"><div class="benefit-icon">❤️</div><h3>Relacionamentos Profundos</h3><p>Conexões verdadeiras baseadas em comunicação autêntica e respeito mútuo.</p></div>
+      <div class="benefit-card"><div class="benefit-icon">💬</div><h3>Comunicação Eficaz</h3><p>Expressar seus sentimentos sem medo e ser ouvida com atenção e empatia.</p></div>
+      <div class="benefit-card"><div class="benefit-icon">✨</div><h3>Autoestima Elevada</h3><p>Reconectar-se com seu próprio valor e brilhar em todas as áreas da vida.</p></div>
+      <div class="benefit-card"><div class="benefit-icon">👑</div><h3>Empoderamento Real</h3><p>Tomar as rédeas da sua vida com decisões conscientes e corajosas.</p></div>
+      <div class="benefit-card"><div class="benefit-icon">🌿</div><h3>Autocuidado Prático</h3><p>Rituais diários que cabem na sua rotina e renovam sua energia feminina.</p></div>
+      <div class="benefit-card"><div class="benefit-icon">🏆</div><h3>Conquistas Contínuas</h3><p>Metas claras e realizáveis que constroem a vida que você merece.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="depoimentos" class="section section-offwhite section-hidden">
+  <div class="container">
+    <h2>O Que Nossas Alunas Dizem</h2>
+    <p style="text-align:center;margin:0 auto var(--space-2xl);max-width:500px;color:var(--text-muted);">Mais de <strong>10.000 mulheres</strong> já transformaram suas vidas</p>
+    <div class="testimonials">
+      <div class="testimonial-card"><div class="testimonial-stars">★★★★★</div><div class="testimonial-text">"Nunca imaginei que em 7 dias eu pudesse me sentir tão diferente. O programa mudou a forma como eu me vejo e me relaciono."</div><div class="testimonial-author"><div class="testimonial-avatar">AM</div><div><div class="testimonial-name">Ana M.</div><div class="testimonial-age">34 anos</div></div></div></div>
+      <div class="testimonial-card"><div class="testimonial-stars">★★★★★</div><div class="testimonial-text">"Eu estava num relacionamento que me sufocava e não tinha forças para sair. O método me deu clareza e coragem. Sou outra mulher."</div><div class="testimonial-author"><div class="testimonial-avatar">CL</div><div><div class="testimonial-name">Carla L.</div><div class="testimonial-age">42 anos</div></div></div></div>
+      <div class="testimonial-card"><div class="testimonial-stars">★★★★★</div><div class="testimonial-text">"Vale cada centavo. Em 30 minutos por dia aprendi mais sobre mim mesma do que em anos de terapia. Recomendo de olhos fechados."</div><div class="testimonial-author"><div class="testimonial-avatar">JS</div><div><div class="testimonial-name">Juliana S.</div><div class="testimonial-age">29 anos</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="garantia" class="section section-white section-hidden">
+  <div class="container">
+    <div class="guarantee">
+      <div class="guarantee-badge">✓ Garantia Incondicional</div>
+      <h2>Satisfação Garantida — ou Seu Dinheiro de Volta</h2>
+      <p class="guarantee-text">Estamos tão confiantes na transformação que você vai viver que assumimos o risco por você. Se em 7 dias você sentir que o programa não é para você, por qualquer razão, devolvemos 100% do seu investimento. Sem perguntas, sem burocracia.</p>
+      <p style="color:var(--text-muted);">Você não tem nada a perder. E tem tudo a ganhar.</p>
+    </div>
+  </div>
+</section>
+
+<section id="cta" class="section section-gradient section-hidden">
+  <div class="container">
+    <div class="cta-final">
+      <h2>Comece Sua Transformação Agora</h2>
+      <p>Garanta seu acesso imediato a todos os ebooks e videoaulas, mais bônus exclusivos.</p>
+      <div class="price-block">
+        <div class="price-old">De <span class="strikethrough">R$197</span></div>
+        <div class="price-current">R$47</div>
+        <div class="price-installments">ou 3x de <strong>R$17,90</strong></div>
+        <a href="https://pay.kiwify.com.br/yQAZ5xJ" target="_blank" rel="noopener" class="btn btn-primary btn-large">Quero Ser Inesquecível</a>
+      </div>
+      <div style="margin-top:var(--space-xl);">
+        <p style="font-size:0.95rem;color:rgba(255,255,255,0.85);margin-bottom:var(--space-sm);">🎁 Bônus: Guia Prático de Autocuidado (Valor: R$97)</p>
+        <p style="font-size:0.95rem;color:rgba(255,255,255,0.85);">📧 Suporte por E-mail por 30 Dias</p>
+      </div>
+      <p class="urgency">⏰ Oferta por tempo limitado — vagas encerrando</p>
+      <p style="font-size:0.8rem;color:rgba(255,255,255,0.6);margin-top:var(--space-md);">Pagamento 100% seguro · Acesso imediato após confirmação</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-brand">Mulher Inesquecível</div>
+    <div class="footer-divider"></div>
+    <p>© 2026 — Todos os direitos reservados.</p>
+    <p style="margin-top:var(--space-xs);">Este produto não substitui acompanhamento profissional. Resultados variam de pessoa para pessoa.</p>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('section-visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.section-hidden').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
